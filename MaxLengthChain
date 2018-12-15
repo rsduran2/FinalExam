@@ -1,0 +1,24 @@
+public int MLPC(int [][] pairs){
+
+int max = pairs.length;
+int[]dp = new int [max];
+dp[0] = 0;
+int dpMAX = 0;
+
+for(int i = 0; i<max-1; i++){
+  for(int j = 1; j<max; j++){
+    if(pairs[i][1] < pairs[0][j]){
+      dp[j] = Math.max(dp[j],dp[i]+1);
+    }
+   }
+  }
+
+for(int i = 0; i<max; i++){
+  if(dp[i] > dpMAX){
+    dpMAX += dp[i];
+  }
+
+}
+
+return dpMAX;
+}
