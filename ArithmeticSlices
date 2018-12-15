@@ -1,0 +1,16 @@
+public int AS(int[]n){
+int dp[] = new int[n.length];
+dp[0] = 0;
+dp[1] = 0;
+int sum = 0;
+
+for(int i=2; i<n.length;i++){
+  if((n[i]-n[i-1]) == (n[i-1]-n[i-2])){
+    dp[i] = dp[i-1]+1;
+    sum += dp[i];
+    }
+}
+
+return sum;
+
+}
