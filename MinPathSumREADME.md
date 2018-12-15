@@ -1,0 +1,5 @@
+dp[0] = nums[0][0]
+dp[i] += Math.min(nums[row-1][col-1],nums[row-1][col],nums[i-1][col+1]
+  
+  
+Using an array, dp, to keep track of the cost to reach an element in the last row. dp[0] is set this way because we will be starting at the beginning row and beginning column. We want to check at which col at the current row position holds the smallest number. This is using two for loops that will be set at row = 1 and col = 1 since setting them at zero would return errors and this makes sure each col and/ row is properly visited.
