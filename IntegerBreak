@@ -1,5 +1,4 @@
-mProduct[0] = 0
-mProduct[1] = 1
-mProduct[i] = Math.max(mProduct[i], mProduct [j]*mProduct[i-j]
+dp[0] = 1
+dp[i] = Math.max(dp[j],dp[j-i]*i]
 
-Using an array for mProduct that keeps track of the max integer breaks for the target. Each iteration in mProduct from the recursive call multiplies the two max numbers of mProduct with relation to i and j found in the for loops and compares those two with mProduct[i].
+We are using an array dp to store the max number of the total of breaks from the original array. We have two for loops i and j that will represent what we can choose and the sum of the items we are going choose. This is why we compare current dp of the jth position with dp if (j-i)+i because we can choose i as well. When we go through the entire original array we can then check j in order to get the max number from the dp array which will be at the end.
