@@ -1,5 +1,5 @@
-dp[0] = 0
-dp[1] = 1
-dp [i] = Math.max(dp[i],(Math.max(j,dp[j])) * (Math.max(i-j,dp[i-j])))
+mProduct[0] = 0
+mProduct[1] = 1
+mProduct[i] = Math.max(mProduct[i], mProduct [j]*mProduct[i-j]
 
-Using an array for dp that keeps track of the max integer breaks for the target. Each iteration in dp from the recursive call multiplies the two max numbers of dp with relation to i and j found in the for loops and compares those two with dp[i]. 
+Using an array for mProduct that keeps track of the max integer breaks for the target. Each iteration in mProduct from the recursive call multiplies the two max numbers of mProduct with relation to i and j found in the for loops and compares those two with mProduct[i].
